@@ -1,0 +1,36 @@
+.crypto-body {
+  @include flexCenter(row);
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: lighten($color: #000000, $amount: 90);
+  padding: 20px 5px;
+  & > div {
+    @include flexCenter(column);
+    width: 250px;
+    text-align: center;
+    padding: 5px;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 0 5px 2px darken($color: white, $amount: 25);
+    letter-spacing: 0.5px;
+    border-radius: 10px;
+    img {
+      height: 30px;
+    }
+    span,
+    b {
+      color: lighten($color: #000000, $amount: 25);
+    }
+    .negative {
+      color: #c92a2a;
+    }
+    .positive {
+      color: #2ac92a;
+    }
+
+    &:hover {
+      transform: scale(1.07);
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Crypto Tracker",
+  "version": "1.0.0",
+  "description": "Crypto Tracker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "pm2 start server.js --watch -f --ignore-watch='node_modules'",
+    "dev": "pm2 kill && npm run server && cd ./client/ && npm start",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": [
+    "soccermass"
+  ],
+  "author": "PedroMASS",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  },
+  "engines": {
+    "node": "12.16.3",
+    "npm": "6.14.5"
+  }
+}

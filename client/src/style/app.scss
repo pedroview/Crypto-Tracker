@@ -1,0 +1,29 @@
+@import "./variables";
+@import "./layout";
+@import "./body";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+a:link {
+  cursor: pointer;
+  color: color(design);
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: color(design);
+}
+a:hover {
+  color: color(primary);
+  transition-delay: 200ms;
+}
+a:active {
+  text-decoration: none;
+  color: color(design);
+}

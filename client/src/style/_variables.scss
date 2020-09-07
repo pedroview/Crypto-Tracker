@@ -1,0 +1,17 @@
+$fontColors: (
+  "primary": thistle,
+  "error": rgb(255, 20, 20),
+  "secondary": #343a40,
+  "design": rgb(255, 150, 40),
+);
+@function color($color) {
+  @return map-get($fontColors, $color);
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

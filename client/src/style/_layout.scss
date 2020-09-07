@@ -1,0 +1,111 @@
+.crypto-header {
+  background: color(secondary);
+  @include flexCenter(column);
+  flex-wrap: wrap;
+  color: color(primary);
+  padding: 10px 20px;
+  h1 {
+    margin: 10px 0 5px;
+  }
+  & > div {
+    @include flexCenter(row);
+    justify-content: space-evenly;
+    height: 100px;
+    .indiv-img {
+      max-width: 25px;
+      position: relative;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+    }
+    .indiv-img:nth-child(1),
+    .indiv-img:nth-child(4),
+    .indiv-img:nth-child(7) {
+      top: 30%;
+      animation-name: icon-float-1;
+      animation-duration: 4s;
+      animation-delay: 0.2s;
+      animation-timing-function: ease-in-out;
+    }
+    .indiv-img:nth-child(2),
+    .indiv-img:nth-child(5),
+    .indiv-img:nth-child(8) {
+      top: -30%;
+      animation-name: icon-float-2;
+      animation-duration: 2.5s;
+      animation-delay: 0.3s;
+      animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    .indiv-img:nth-child(3),
+    .indiv-img:nth-child(9) {
+      top: 0%;
+      animation-name: icon-float-3;
+      animation-duration: 3s;
+      animation-delay: 0.5s;
+      animation-timing-function: ease-out;
+    }
+    .indiv-img:nth-child(6),
+    .indiv-img:nth-child(10) {
+      top: 30%;
+      animation-name: icon-float-4;
+      animation-duration: 3.5s;
+      animation-delay: 0.34s;
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  }
+}
+@keyframes icon-float-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: scale(1.05) translateY(-100%);
+  }
+  100% {
+    transform: scale(1) translateY(0%);
+  }
+}
+@keyframes icon-float-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(70%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes icon-float-3 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes icon-float-4 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.crypto-footer {
+  background: color(secondary);
+  @include flexCenter(row);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: color(primary);
+  padding: 10px;
+  img {
+    margin: 3px;
+    height: 25px;
+  }
+}
