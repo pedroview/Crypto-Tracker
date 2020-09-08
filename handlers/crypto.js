@@ -19,19 +19,13 @@ exports.crypto = async (req, res, next) => {
       gzip: true,
     };
     // return fake API if in development or no network
-    if (process.env.NODE_ENV === "production") {
-      rp(requestOptions)
-        .then((response) => {
-          // console.log("API call response:", response);
-          return res.status(200).send(response);
-        })
-        .catch((err) => {
-          // console.log("API call error:", err.message);
-          return res.status(200).send(err);
-        });
-    } else {
-      return res.status(200).send(fakeResult);
-    }
+    rp(requestOptions)
+      .then((response) => {
+        return res.status(200).send(response);
+      })
+      .catch((err) => {
+        return res.status(200).send(fakeResult);
+      });
   } catch (err) {
     return next({
       status: 400,
