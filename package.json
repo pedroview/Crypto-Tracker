@@ -12,7 +12,7 @@
   "keywords": [
     "soccermass"
   ],
-  "author": "PedroMASS",
+  "author": "PedroView",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
