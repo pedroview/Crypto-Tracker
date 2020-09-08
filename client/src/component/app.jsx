@@ -11,7 +11,11 @@ export default () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/cryptocurrency")
+      .get(
+        process.env.NODE_ENV === "production"
+          ? "http://pedroview-crypto.herokuapp.com/cryptocurrency"
+          : "http://localhost:5000/cryptocurrency"
+      )
       .then(({ data }) => {
         setCard(data.data);
       })
