@@ -1,6 +1,6 @@
 {
-  "name": "pedroviewcrypto",
-  "version": "0.1.0",
+  "name": "pedroview-crypto",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "axios": "^0.19.2",
